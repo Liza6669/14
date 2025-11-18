@@ -1,0 +1,38 @@
+class Programm
+ {
+     static void Main(string[] args)
+     {
+         Food[] foods = { new Pizza(), new Burger(), new Food() };
+         foreach (var food in foods)
+         {
+             food.Eat();
+         }
+     }
+ }
+{
+    public class Burger : Food
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("Едим бургер!");
+        }
+    }
+}
+{
+    public class Pizza : Food
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("Едим пиццу!");
+        }
+    }
+}
+{
+    public class Food
+    {
+         public virtual void Eat()
+        {
+            Console.WriteLine("Едим...");
+        }
+    }
+}
