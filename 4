@@ -1,0 +1,33 @@
+{
+    class Programm
+    {
+        static void Main(string[] args)
+        {
+            Shape[] shapes = { new Circle(), new Triangle() };
+            foreach (var shape in shapes)
+            {
+                Console.WriteLine(shape.Draw());
+            }
+        }
+    }
+}
+{
+    class Triangle : Shape
+    {
+        public override string Draw() => "Рисую треугольник";
+    }
+}
+{
+    class Circle : Shape
+    {
+        public override string Draw() => "Рисую круг";
+        
+        
+    }
+}
+{
+    abstract class Shape
+    {
+        public abstract string Draw();
+    }
+}
